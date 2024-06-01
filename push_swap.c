@@ -1,24 +1,28 @@
 /* ************************************************************************** */
 /*                                                                            */
 /*                                                        :::      ::::::::   */
-/*   ft_strlen.c                                        :+:      :+:    :+:   */
+/*   push_swap.c                                        :+:      :+:    :+:   */
 /*                                                    +:+ +:+         +:+     */
 /*   By: csouita <csouita@student.42.fr>            +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
-/*   Created: 2024/05/23 17:11:18 by csouita           #+#    #+#             */
-/*   Updated: 2024/06/01 14:12:23 by csouita          ###   ########.fr       */
+/*   Created: 2024/05/24 17:18:37 by csouita           #+#    #+#             */
+/*   Updated: 2024/06/01 18:36:04 by csouita          ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
 #include "push_swap.h"
 
-size_t ft_strlen(char *s)
+int main(int ac, char *av[])
 {
-    size_t i ;
-    i = 0;
-    while(s[i])
-    {
-        i++;
-    }
-    return i ;
+    t_list *stack_a = NULL;
+    int i ;
+    i = 0 ;
+    if (ac == 1)
+        exit(0);
+    fill_up_stack_a(ac,av,&stack_a);
+    i = ft_lstsize(stack_a);
+    if (i == 1)
+        (free_stacks(&stack_a)),exit(0);
+    return 0;
+    is_sorted(&stack_a);
 }

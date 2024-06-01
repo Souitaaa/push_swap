@@ -1,24 +1,31 @@
 /* ************************************************************************** */
 /*                                                                            */
 /*                                                        :::      ::::::::   */
-/*   ft_strlen.c                                        :+:      :+:    :+:   */
+/*   ft_strdup.c                                        :+:      :+:    :+:   */
 /*                                                    +:+ +:+         +:+     */
 /*   By: csouita <csouita@student.42.fr>            +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
-/*   Created: 2024/05/23 17:11:18 by csouita           #+#    #+#             */
-/*   Updated: 2024/06/01 14:12:23 by csouita          ###   ########.fr       */
+/*   Created: 2024/06/01 12:26:14 by csouita           #+#    #+#             */
+/*   Updated: 2024/06/01 12:27:00 by csouita          ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
 #include "push_swap.h"
 
-size_t ft_strlen(char *s)
+char    *ft_strdup(char *s1)
 {
-    size_t i ;
-    i = 0;
-    while(s[i])
-    {
-        i++;
-    }
-    return i ;
+        int             i;
+        char    *dest;
+
+        i = 0;
+        dest = malloc(sizeof(char) * (ft_strlen(s1) + 1));
+        if (!dest)
+                return (NULL);
+        while (s1[i])
+        {
+                dest[i] = s1[i];
+                i++;
+        }
+        dest[i] = '\0';
+        return (dest);
 }

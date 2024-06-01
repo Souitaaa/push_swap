@@ -1,24 +1,36 @@
 /* ************************************************************************** */
 /*                                                                            */
 /*                                                        :::      ::::::::   */
-/*   ft_strlen.c                                        :+:      :+:    :+:   */
+/*   frees.c                                            :+:      :+:    :+:   */
 /*                                                    +:+ +:+         +:+     */
 /*   By: csouita <csouita@student.42.fr>            +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
-/*   Created: 2024/05/23 17:11:18 by csouita           #+#    #+#             */
-/*   Updated: 2024/06/01 14:12:23 by csouita          ###   ########.fr       */
+/*   Created: 2024/06/01 12:31:16 by csouita           #+#    #+#             */
+/*   Updated: 2024/06/01 12:45:13 by csouita          ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
 #include "push_swap.h"
 
-size_t ft_strlen(char *s)
+void free_stacks(t_list **stack)
 {
-    size_t i ;
-    i = 0;
-    while(s[i])
+    t_list *temp ;
+
+    while(*stack)
     {
+        temp = (*stack)->next;
+        free(*stack);
+        *stack = temp ;
+    }   
+}
+void free_strs(char **strs)
+{
+    int i ;
+    i = 0 ;
+    while(strs[i])
+    {
+        free(strs[i]);
         i++;
     }
-    return i ;
+    free(strs);
 }

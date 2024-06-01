@@ -1,24 +1,30 @@
 /* ************************************************************************** */
 /*                                                                            */
 /*                                                        :::      ::::::::   */
-/*   ft_strlen.c                                        :+:      :+:    :+:   */
+/*   ft_memcpy.c                                        :+:      :+:    :+:   */
 /*                                                    +:+ +:+         +:+     */
 /*   By: csouita <csouita@student.42.fr>            +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
-/*   Created: 2024/05/23 17:11:18 by csouita           #+#    #+#             */
-/*   Updated: 2024/06/01 14:12:23 by csouita          ###   ########.fr       */
+/*   Created: 2024/05/25 17:22:40 by csouita           #+#    #+#             */
+/*   Updated: 2024/05/25 17:22:59 by csouita          ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
 #include "push_swap.h"
 
-size_t ft_strlen(char *s)
+void    *ft_memcpy(void *dest, const void *src, size_t n)
 {
-    size_t i ;
-    i = 0;
-    while(s[i])
-    {
-        i++;
-    }
-    return i ;
+        size_t  i;
+
+        i = 0;
+        if (dest == src)
+                return (dest);
+        if (!dest && !src)
+                return (NULL);
+        while (i < n)
+        {
+                ((unsigned char *)dest)[i] = ((unsigned char *)src)[i];
+                i++;
+        }
+        return (dest);
 }
