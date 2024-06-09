@@ -12,25 +12,28 @@
 
 #include "push_swap.h"
 
-char    *ft_strjoin(char *s1, char *s2)
+char	*ft_strjoin(char *s1, char *s2)
 {
-        char    *str;
-        size_t  ls1;
-        size_t  ls2;
+	int		len;
+	char	*p;
+	int		i;
+	int		j;
 
-        if (!s1)
-                return s2;
-        if (!s2)
-                return s1;
-        ls1 = ft_strlen(s1);
-        ls2 = ft_strlen(s2);
-        str = malloc(sizeof(char) * (ls1 + ls2) + 2);
-        if (!str)
-                return (NULL);
-        ft_memcpy(str, s1, ls1);
-        ft_memcpy((str + ls1), s2, ls2);
-        str[ls1 + ls2] = ' ';
-        str[ls1 + ls2 + 1] = '\0';
-        return (str);
-} 
-
+	len = ft_strlen(s1) + ft_strlen(s2);
+	i = 0;
+	j = 0;
+	p = malloc((len + 2) * sizeof(char));
+	if (p == NULL)
+		return (NULL);
+	while (s1 != NULL && s1[i] != '\0')
+	{
+		p[i] = s1[i];
+		i++;
+	}
+	while (s2 != NULL && s2[j] != '\0')
+		p[i++] = s2[j++];
+	p[i++] = ' ';
+	p[i] = '\0';
+	free(s1);
+	return (p);
+}

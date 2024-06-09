@@ -23,6 +23,6 @@ int main(int ac, char *av[])
     i = ft_lstsize(stack_a);
     if (i == 1)
         (free_stacks(&stack_a)),exit(0);
-    return 0;
     is_sorted(&stack_a);
+    return 0;
 }

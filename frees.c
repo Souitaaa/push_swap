@@ -20,13 +20,16 @@ void free_stacks(t_list **stack)
     {
         temp = (*stack)->next;
         free(*stack);
-        *stack = temp ;
+        *stack = temp ;        
     }   
+    return;
 }
 void free_strs(char **strs)
 {
     int i ;
     i = 0 ;
+    if (!strs)
+        return;
     while(strs[i])
     {
         free(strs[i]);

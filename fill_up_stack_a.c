@@ -24,8 +24,6 @@ void fill_up_stack_a(int ac ,char **av,t_list **stack_a)
         str = ft_strjoin(str,av[i++]);
     }
     strs = ft_split(str,' ');
-    // exit(1);
-    // free(str);
     i = 0; 
     while(strs[i])
     {
@@ -40,21 +38,4 @@ void fill_up_stack_a(int ac ,char **av,t_list **stack_a)
         check_doubles(stack_a,strs,(int)num);
         ft_lstadd_back(stack_a,ft_lstnew((int)num));
     }
-
-    // t_list *tmp = *stack_a;
-
-    // if(tmp == NULL)
-    //     printf("9awed");
-
-    // while ((tmp))
-    // {
-    //     printf("%d\n",tmp->content);
-    //     tmp = tmp->next;
-    // }
-    // while ((*stack_a))
-    // {
-    //     printf("%d\n",(*stack_a)->content);
-    //     *stack_a = (*stack_a)->next;
-    // }
-
 }
