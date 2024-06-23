@@ -31,5 +31,19 @@ char    *ft_strdup(char *s1);
 void free_strs(char **strs);
 void free_stacks(t_list **stack);
 void is_sorted(t_list **stack_a);
+void	sa(t_list **stack_a);
+void	rb(t_list **stack_b);
+void	ra(t_list **stack_a);
+void	sb(t_list **stack_b);
+void	pa(t_list **stack_b, t_list **stack_a);
+void	pb(t_list **stack_a, t_list **stack_b);
+void	rrb(t_list **stack_b);
+void	rra(t_list **stack_a);
+void	swap(t_list **stack);
+void	rotate(t_list **stack);
+void	reverse_rotate(t_list **stack);
+void mini_sort(t_list **stack_a, t_list **stack_b, int i);
+int max_number(t_list *stack);
+
 
 #endif

@@ -15,6 +15,8 @@
 int main(int ac, char *av[])
 {
     t_list *stack_a = NULL;
+    t_list *stack_b = NULL;
+
     int i ;
     i = 0 ;
     if (ac == 1)
@@ -24,5 +26,6 @@ int main(int ac, char *av[])
     if (i == 1)
         (free_stacks(&stack_a)),exit(0);
     is_sorted(&stack_a);
+    mini_sort(&stack_a ,&stack_b ,i);
     return 0;
 }

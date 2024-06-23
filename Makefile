@@ -2,7 +2,7 @@ NAME			= push_swap
 
 SRCS	= ft_putstr.c ft_strlen.c ft_strjoin.c parsing.c \
 			ft_memcpy.c ft_split.c fill_up_stack_a.c push_swap.c ft_strdup.c \
-			utils.c frees.c 
+			utils.c frees.c mini_sort.c moves_2.c moves.c \
 
 					
 CC				= cc
