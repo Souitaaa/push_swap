@@ -6,7 +6,7 @@
 /*   By: csouita <csouita@student.42.fr>            +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2024/06/23 16:24:03 by csouita           #+#    #+#             */
-/*   Updated: 2024/06/25 16:29:34 by csouita          ###   ########.fr       */
+/*   Updated: 2024/06/25 21:59:29 by csouita          ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -34,8 +34,10 @@ void sort_four(t_list **stack_a, t_list **stack_b)
             rra(stack_a);
     }
     sort_three(stack_a);
-    // while(ft_lstsize(*stack_a))
+    while(ft_lstsize(*stack_b))
         pa(stack_b,stack_a);
+    free_stacks(stack_a);
+    free_stacks(stack_b);
 }
 
 void mini_sort(t_list **stack_a, t_list **stack_b, int i)
@@ -49,11 +51,7 @@ void mini_sort(t_list **stack_a, t_list **stack_b, int i)
         exit(0);
     }
     else if (i == 3) 
-    {
         sort_three(stack_a);
-    }
-    else if(i == 4)
-    {
+    else if(i == 4 || i == 5)
         sort_four(stack_a,stack_b);
-    }
 }
