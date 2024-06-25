@@ -1,3 +1,15 @@
+/* ************************************************************************** */
+/*                                                                            */
+/*                                                        :::      ::::::::   */
+/*   push_swap.h                                        :+:      :+:    :+:   */
+/*                                                    +:+ +:+         +:+     */
+/*   By: csouita <csouita@student.42.fr>            +#+  +:+       +#+        */
+/*                                                +#+#+#+#+#+   +#+           */
+/*   Created: 2024/06/24 16:24:07 by csouita           #+#    #+#             */
+/*   Updated: 2024/06/25 16:20:26 by csouita          ###   ########.fr       */
+/*                                                                            */
+/* ************************************************************************** */
+
 #ifndef PUSH_SWAP_H
 #define PUSH_SWAP_H
 
@@ -44,6 +56,8 @@ void	rotate(t_list **stack);
 void	reverse_rotate(t_list **stack);
 void mini_sort(t_list **stack_a, t_list **stack_b, int i);
 int max_number(t_list *stack);
-
+int minimum(t_list *stack);
+int index_of_min(t_list *stack);
+void sort_four(t_list **stack_a, t_list **stack_b);
 
 #endif
