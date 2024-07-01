@@ -6,7 +6,7 @@
 /*   By: csouita <csouita@student.42.fr>            +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2024/05/27 23:00:30 by csouita           #+#    #+#             */
-/*   Updated: 2024/06/25 21:56:12 by csouita          ###   ########.fr       */
+/*   Updated: 2024/06/25 22:23:40 by csouita          ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -22,7 +22,7 @@ t_list	*ft_lstnew(int content)
     new_node->content = content;
     new_node->next = NULL;
     return new_node;
-} 
+}
 
 void ft_lstadd_front(t_list **lst, t_list *new)
 {
@@ -77,4 +77,3 @@ void	ft_lstadd_back(t_list **lst, t_list *new)
 	p = ft_lstlast(*lst);
 	p->next = new;
 }
-

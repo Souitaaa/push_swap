@@ -6,7 +6,7 @@
 /*   By: csouita <csouita@student.42.fr>            +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2024/05/22 18:04:13 by csouita           #+#    #+#             */
-/*   Updated: 2024/06/01 18:33:11 by csouita          ###   ########.fr       */
+/*   Updated: 2024/06/27 16:41:33 by csouita          ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -73,6 +73,7 @@ void check_doubles(t_list **stack_a ,char **strs , int num)
         tmp = tmp->next;
     }
 }
+
 void is_sorted(t_list **stack_a)
 {
     t_list *temp ;
