@@ -6,7 +6,7 @@
 /*   By: csouita <csouita@student.42.fr>            +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2024/06/24 16:24:07 by csouita           #+#    #+#             */
-/*   Updated: 2024/07/04 21:03:07 by csouita          ###   ########.fr       */
+/*   Updated: 2024/07/05 16:21:48 by csouita          ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -60,8 +60,8 @@ int minimum(t_list *stack);
 int index_of_min(t_list *stack);
 void sort_four(t_list **stack_a, t_list **stack_b);
 void index_of_liste(t_list **stack_a,int *array);
-int *cp_to_array(t_list **stack_a);
-int *sort_array(int *array,t_list **stack_a);
+int *cp_to_array(t_list *stack_a);
+int *sort_array(int *array,t_list *stack_a);
 void index_of_list(t_list *stack_a,int *array);
 int best_index(t_list *stack_a ,t_list *stack_b, int p);
 int max_index(t_list *stack_a,int max);
