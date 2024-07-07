@@ -14,22 +14,22 @@
 
 t_list	*ft_lstnew(int content)
 {
-    t_list *new_node;
-    
-    new_node = malloc(sizeof(t_list));
-    if (!new_node)
-        return NULL;
-    new_node->content = content;
-    new_node->next = NULL;
-    return new_node;
+	t_list	*new_node;
+
+	new_node = malloc(sizeof(t_list));
+	if (!new_node)
+		return (NULL);
+	new_node->content = content;
+	new_node->next = NULL;
+	return (new_node);
 }
 
-void ft_lstadd_front(t_list **lst, t_list *new)
+void	ft_lstadd_front(t_list **lst, t_list *new)
 {
-    if (lst == NULL || new == NULL)
-        return;
-    new->next = *lst ;
-    *lst = new ;
+	if (lst == NULL || new == NULL)
+		return ;
+	new->next = *lst;
+	*lst = new;
 }
 
 int	ft_lstsize(t_list *lst)

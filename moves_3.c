@@ -1,41 +1,40 @@
 /* ************************************************************************** */
 /*                                                                            */
 /*                                                        :::      ::::::::   */
-/*   frees.c                                            :+:      :+:    :+:   */
+/*   moves_3.c                                          :+:      :+:    :+:   */
 /*                                                    +:+ +:+         +:+     */
 /*   By: csouita <csouita@student.42.fr>            +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
-/*   Created: 2024/06/01 12:31:16 by csouita           #+#    #+#             */
-/*   Updated: 2024/07/07 20:18:27 by csouita          ###   ########.fr       */
+/*   Created: 2024/07/07 20:19:42 by csouita           #+#    #+#             */
+/*   Updated: 2024/07/07 20:44:45 by csouita          ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
 #include "push_swap.h"
 
-void	free_stacks(t_list **stack)
+void	ra(t_list **stack_a)
 {
-	t_list	*temp;
-
-	while (*stack)
+	if (ft_lstsize(*stack_a) > 1)
 	{
-		temp = (*stack)->next;
-		free(*stack);
-		*stack = temp;
+		rotate(stack_a);
+		ft_putstr_fd("ra\n", 1);
 	}
-	return ;
 }
 
-void	free_strs(char **strs)
+void	rb(t_list **stack_b)
 {
-	int	i;
-
-	i = 0;
-	if (!strs)
-		return ;
-	while (strs[i])
+	if (ft_lstsize(*stack_b) > 1)
 	{
-		free(strs[i]);
-		i++;
+		rotate(stack_b);
+		ft_putstr_fd("rb\n", 1);
 	}
-	free(strs);
+}
+
+void	sa(t_list **stack_a)
+{
+	if (ft_lstsize(*stack_a) > 1)
+	{
+		swap(stack_a);
+		ft_putstr_fd("sa\n", 1);
+	}
 }

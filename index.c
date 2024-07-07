@@ -6,7 +6,7 @@
 /*   By: csouita <csouita@student.42.fr>            +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2024/06/25 15:48:42 by csouita           #+#    #+#             */
-/*   Updated: 2024/06/25 16:28:45 by csouita          ###   ########.fr       */
+/*   Updated: 2024/07/07 20:35:39 by csouita          ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -37,6 +37,21 @@ int	index_of_min(t_list *stack)
 			return (i);
 		i++;
 		stack = stack->next;
+	}
+	return (i);
+}
+
+int	max_index(t_list *stack_a, int max)
+{
+	int	i;
+
+	i = 0;
+	while (stack_a)
+	{
+		if (stack_a->content == max)
+			break ;
+		i++;
+		stack_a = stack_a->next;
 	}
 	return (i);
 }

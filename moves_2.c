@@ -6,7 +6,7 @@
 /*   By: csouita <csouita@student.42.fr>            +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2024/06/23 16:26:08 by csouita           #+#    #+#             */
-/*   Updated: 2024/06/23 16:27:29 by csouita          ###   ########.fr       */
+/*   Updated: 2024/07/07 20:19:31 by csouita          ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -62,32 +62,5 @@ void	sb(t_list **stack_b)
 	{
 		swap(stack_b);
 		ft_putstr_fd("sb\n", 1);
-	}
-}
-
-void	ra(t_list **stack_a)
-{
-	if (ft_lstsize(*stack_a) > 1)
-	{
-		rotate(stack_a);
-		ft_putstr_fd("ra\n", 1);
-	}
-}
-
-void	rb(t_list **stack_b)
-{
-	if (ft_lstsize(*stack_b) > 1)
-	{
-		rotate(stack_b);
-		ft_putstr_fd("rb\n", 1);
-	}
-}
-
-void	sa(t_list **stack_a)
-{
-	if (ft_lstsize(*stack_a) > 1)
-	{
-		swap(stack_a);
-		ft_putstr_fd("sa\n", 1);
 	}
 }

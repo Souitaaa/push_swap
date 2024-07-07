@@ -6,7 +6,7 @@
 /*   By: csouita <csouita@student.42.fr>            +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2024/06/23 16:24:03 by csouita           #+#    #+#             */
-/*   Updated: 2024/07/07 20:12:16 by csouita          ###   ########.fr       */
+/*   Updated: 2024/07/07 20:43:18 by csouita          ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -24,21 +24,6 @@ void	sort_three(t_list **stack_a)
 	if ((*stack_a)->content > (*stack_a)->next->content)
 		sa(stack_a);
 	free_stacks(stack_a);
-}
-
-int	max_index(t_list *stack_a, int max)
-{
-	int	i;
-
-	i = 0;
-	while (stack_a)
-	{
-		if (stack_a->content == max)
-			break ;
-		i++;
-		stack_a = stack_a->next;
-	}
-	return (i);
 }
 
 void	sort_four(t_list **stack_a, t_list **stack_b)
@@ -91,22 +76,11 @@ void	sort_by_push_ba(t_list **stack_a, t_list **stack_b)
 	}
 }
 
-void	sort(t_list **stack_a, t_list **stack_b, int p)
-{
-	int	*array;
-
-	array = sort_array(cp_to_array(*stack_a), *stack_a);
-	index_of_list(*stack_a, array);
-	sort_by_push_ab(stack_a, stack_b, p);
-	sort_by_push_ba(stack_a, stack_b);
-	free_stacks(stack_a);
-	free_stacks(stack_b);
-	free(array);
-}
-
 void	mini_sort(t_list **stack_a, t_list **stack_b, int i)
 {
-	int p = 30;
+	int	p;
+
+	p = 30;
 	if (i == 2)
 	{
 		if ((*stack_a)->content > (*stack_a)->next->content)
@@ -118,10 +92,10 @@ void	mini_sort(t_list **stack_a, t_list **stack_b, int i)
 		sort_three(stack_a);
 	else if (i == 4 || i == 5)
 		sort_four(stack_a, stack_b);
-    else 
-    {
-	    if (i > 5 && i < 500)
-		    p = 15;
-	    sort(stack_a, stack_b, p);        
-    }
+	else
+	{
+		if (i > 5 && i < 500)
+			p = 15;
+		sort(stack_a, stack_b, p);
+	}
 }

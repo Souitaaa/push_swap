@@ -6,7 +6,7 @@
 /*   By: csouita <csouita@student.42.fr>            +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2024/06/24 16:24:07 by csouita           #+#    #+#             */
-/*   Updated: 2024/07/05 16:21:48 by csouita          ###   ########.fr       */
+/*   Updated: 2024/07/07 20:44:00 by csouita          ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -67,5 +67,6 @@ int				best_index(t_list *stack_a, t_list *stack_b, int p);
 int				max_index(t_list *stack_a, int max);
 void			sort_by_push_ba(t_list **stack_a, t_list **stack_b);
 void			sort_by_push_ab(t_list **stack_a, t_list **stack_b, int p);
+void			sort(t_list **stack_a, t_list **stack_b, int p);
 
 #endif

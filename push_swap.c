@@ -6,11 +6,24 @@
 /*   By: csouita <csouita@student.42.fr>            +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2024/05/24 17:18:37 by csouita           #+#    #+#             */
-/*   Updated: 2024/07/03 13:51:45 by csouita          ###   ########.fr       */
+/*   Updated: 2024/07/07 20:43:27 by csouita          ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
 #include "push_swap.h"
+
+void	sort(t_list **stack_a, t_list **stack_b, int p)
+{
+	int	*array;
+
+	array = sort_array(cp_to_array(*stack_a), *stack_a);
+	index_of_list(*stack_a, array);
+	sort_by_push_ab(stack_a, stack_b, p);
+	sort_by_push_ba(stack_a, stack_b);
+	free_stacks(stack_a);
+	free_stacks(stack_b);
+	free(array);
+}
 
 int	main(int ac, char *av[])
 {
