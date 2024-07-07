@@ -12,28 +12,29 @@
 
 #include "push_swap.h"
 
-void free_stacks(t_list **stack)
+void	free_stacks(t_list **stack)
 {
-    t_list *temp ;
+	t_list	*temp;
 
-    while(*stack)
-    {
-        temp = (*stack)->next;
-        free(*stack);
-        *stack = temp ;        
-    }   
-    return;
+	while (*stack)
+	{
+		temp = (*stack)->next;
+		free(*stack);
+		*stack = temp;
+	}
+	return ;
 }
-void free_strs(char **strs)
+void	free_strs(char **strs)
 {
-    int i ;
-    i = 0 ;
-    if (!strs)
-        return;
-    while(strs[i])
-    {
-        free(strs[i]);
-        i++;
-    }
-    free(strs);
+	int	i;
+
+	i = 0;
+	if (!strs)
+		return ;
+	while (strs[i])
+	{
+		free(strs[i]);
+		i++;
+	}
+	free(strs);
 }

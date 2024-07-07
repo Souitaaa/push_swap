@@ -12,18 +12,20 @@
 
 #include "push_swap.h"
 
-int *cp_to_array(t_list *stack_a)
+int	*cp_to_array(t_list *stack_a)
 {
-    int *array ;
-    int i = 0;
-    array = malloc(sizeof(int) * ft_lstsize(stack_a));
-    while(stack_a)
-    {
-        array[i] = stack_a->content;
-        i++;
-        stack_a = stack_a->next;
-    }
-    return array;
+	int	*array;
+	int	i;
+
+	i = 0;
+	array = malloc(sizeof(int) * ft_lstsize(stack_a));
+	while (stack_a)
+	{
+		array[i] = stack_a->content;
+		i++;
+		stack_a = stack_a->next;
+	}
+	return (array);
 }
 
 int	*sort_array(int *array, t_list *stack_a)
@@ -34,7 +36,7 @@ int	*sort_array(int *array, t_list *stack_a)
 
 	size = ft_lstsize(stack_a);
 	i = 0;
-	while (i < size -1)
+	while (i < size - 1)
 	{
 		if (array[i] > array[i + 1])
 		{
@@ -49,30 +51,34 @@ int	*sort_array(int *array, t_list *stack_a)
 	return (array);
 }
 
-void index_of_list(t_list *stack_a,int *array)
+void	index_of_list(t_list *stack_a, int *array)
 {
-    int i = 0;
-    while(stack_a)
-    {
-        i = 0;
-        while(stack_a->content != array[i])
-            i++;
-        stack_a->index = i;
-        stack_a = stack_a->next;
-    }
+	int	i;
+
+	i = 0;
+	while (stack_a)
+	{
+		i = 0;
+		while (stack_a->content != array[i])
+			i++;
+		stack_a->index = i;
+		stack_a = stack_a->next;
+	}
 }
 
-int best_index(t_list *stack_a ,t_list *stack_b, int p)
+int	best_index(t_list *stack_a, t_list *stack_b, int p)
 {
-    int i = 0;
-    while(stack_a)
-    {
-        if(stack_a->index <= ft_lstsize(stack_b))
-            break;
-        else if(stack_a->index < ft_lstsize(stack_b) + p)
-            break;
-        i++;
-        stack_a = stack_a->next;
-    }
-    return i;
+	int	i;
+
+	i = 0;
+	while (stack_a)
+	{
+		if (stack_a->index <= ft_lstsize(stack_b))
+			break ;
+		else if (stack_a->index < ft_lstsize(stack_b) + p)
+			break ;
+		i++;
+		stack_a = stack_a->next;
+	}
+	return (i);
 }

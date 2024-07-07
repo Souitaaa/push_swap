@@ -28,7 +28,7 @@ void	rotate(t_list **stack)
 
 	tmp1 = (*stack);
 	tmp2 = (*stack)->next;
-	tmp1->next = NULL; 
+	tmp1->next = NULL;
 	*stack = tmp2;
 	ft_lstadd_back(stack, tmp1);
 }
@@ -48,15 +48,16 @@ void	reverse_rotate(t_list **stack)
 	ft_lstadd_front(stack, last);
 }
 
-int max_number(t_list *stack)
+int	max_number(t_list *stack)
 {
-	int max = stack->content;
+	int	max;
 
+	max = stack->content;
 	while (stack->next)
 	{
 		if (max < stack->next->content)
 			max = stack->next->content;
 		stack = stack->next;
 	}
-	return max;
+	return (max);
 }

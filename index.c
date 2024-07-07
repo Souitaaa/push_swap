@@ -12,27 +12,31 @@
 
 #include "push_swap.h"
 
-int minimum(t_list *stack)
+int	minimum(t_list *stack)
 {
-    int min = stack->content;
-    while(stack)
-    {
-        if(stack->content < min)
-            min = stack->content;
-        stack = stack->next;
-    }
-    return min;
+	int	min;
+
+	min = stack->content;
+	while (stack)
+	{
+		if (stack->content < min)
+			min = stack->content;
+		stack = stack->next;
+	}
+	return (min);
 }
 
-int index_of_min(t_list *stack)
+int	index_of_min(t_list *stack)
 {
-    int i = 0;
-    while(stack)
-    {
-        if(stack->content == minimum(stack))
-            return i;
-        i++;
-        stack = stack->next; 
-    }
-    return i;
+	int	i;
+
+	i = 0;
+	while (stack)
+	{
+		if (stack->content == minimum(stack))
+			return (i);
+		i++;
+		stack = stack->next;
+	}
+	return (i);
 }
