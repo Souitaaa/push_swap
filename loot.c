@@ -6,7 +6,7 @@
 /*   By: csouita <csouita@student.42.fr>            +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2024/07/01 23:37:51 by csouita           #+#    #+#             */
-/*   Updated: 2024/07/05 16:52:42 by csouita          ###   ########.fr       */
+/*   Updated: 2024/07/07 17:33:13 by csouita          ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -57,7 +57,7 @@ void index_of_list(t_list *stack_a,int *array)
         i = 0;
         while(stack_a->content != array[i])
             i++;
-        stack_a->content = i;
+        stack_a->index = i;
         stack_a = stack_a->next;
     }
 }

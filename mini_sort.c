@@ -6,7 +6,7 @@
 /*   By: csouita <csouita@student.42.fr>            +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2024/06/23 16:24:03 by csouita           #+#    #+#             */
-/*   Updated: 2024/07/05 16:43:39 by csouita          ###   ########.fr       */
+/*   Updated: 2024/07/07 17:28:24 by csouita          ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -85,7 +85,7 @@ void sort_by_push_ba(t_list **stack_a,t_list **stack_b)
 
 void sort(t_list **stack_a,t_list **stack_b,int p)
 {
-    int *array ;
+    int *array;
     array = sort_array(cp_to_array(*stack_a),*stack_a);
     index_of_list(*stack_a,array);
     sort_by_push_ab(stack_a,stack_b,p);
@@ -94,7 +94,6 @@ void sort(t_list **stack_a,t_list **stack_b,int p)
 
 void mini_sort(t_list **stack_a, t_list **stack_b, int i)
 {
-    (void)i;
     int p = 30;
     if (i == 2)
     {
