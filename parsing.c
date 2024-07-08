@@ -6,7 +6,7 @@
 /*   By: csouita <csouita@student.42.fr>            +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2024/05/22 18:04:13 by csouita           #+#    #+#             */
-/*   Updated: 2024/07/07 20:47:42 by csouita          ###   ########.fr       */
+/*   Updated: 2024/07/08 00:53:40 by csouita          ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -29,10 +29,9 @@ long	ft_atoi(char *str)
 		if (str[i] == '-' || str[i] == '+')
 			return (-2147483649);
 	}
-	while (str[i] == '0')
-		i++;
-	if (ft_strlen(&str[i]) > 11)
-		return (-2147483649);
+	while (str[i++] == '0')
+		if ((ft_strlen(&str[i]) > 11))
+			return (-2147483649);
 	while (str[i] >= '0' && str[i] <= '9' && str[i])
 		res = res * 10 + str[i++] - '0';
 	if (res * sig > 2147483647 || res * sig < -2147483648)
