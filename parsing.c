@@ -6,7 +6,7 @@
 /*   By: csouita <csouita@student.42.fr>            +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2024/05/22 18:04:13 by csouita           #+#    #+#             */
-/*   Updated: 2024/07/08 00:53:40 by csouita          ###   ########.fr       */
+/*   Updated: 2024/07/09 18:53:07 by csouita          ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -21,7 +21,8 @@ long	ft_atoi(char *str)
 	res = 0;
 	i = 0;
 	sig = 1;
-	while (str[i] == 32 && str[i++])
+	while (str[i] == 32 && str[i])
+		i++;
 	if (str[i] == '-' || str[i] == '+')
 	{
 		if (str[i++] == '-')
@@ -29,9 +30,10 @@ long	ft_atoi(char *str)
 		if (str[i] == '-' || str[i] == '+')
 			return (-2147483649);
 	}
-	while (str[i++] == '0')
-		if ((ft_strlen(&str[i]) > 11))
-			return (-2147483649);
+	while (str[i] == '0')
+		i++;
+	if ((ft_strlen(&str[i]) > 11))
+		return (-2147483649);
 	while (str[i] >= '0' && str[i] <= '9' && str[i])
 		res = res * 10 + str[i++] - '0';
 	if (res * sig > 2147483647 || res * sig < -2147483648)
@@ -50,7 +52,7 @@ int	check_spaces(char *av, t_list **stack_a, char **strs)
 		i++;
 	if (!av[i])
 	{
-		ft_putstr_fd("Error\n", 2);
+		ft_putstr_fd("Error1\n", 2);
 		free_stacks(stack_a);
 		free_strs(strs);
 		exit(255);

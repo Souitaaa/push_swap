@@ -3,10 +3,10 @@
 /*                                                        :::      ::::::::   */
 /*   moves.c                                            :+:      :+:    :+:   */
 /*                                                    +:+ +:+         +:+     */
-/*   By: csouita <csouita@student.42.fr>            +#+  +:+       +#+        */
+/*   By: souita <souita@student.42.fr>              +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2024/06/23 16:25:32 by csouita           #+#    #+#             */
-/*   Updated: 2024/06/23 22:11:49 by csouita          ###   ########.fr       */
+/*   Updated: 2024/07/09 02:24:02 by souita           ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -60,4 +60,11 @@ int	max_number(t_list *stack)
 		stack = stack->next;
 	}
 	return (max);
+}
+
+void rr(t_list **stack_a,t_list **stack_b)
+{
+	ra(stack_a);
+	rb(stack_b);
+	ft_putstr_fd("rr\n",1);
 }

@@ -13,7 +13,7 @@ SRCSB   = checker.c ft_putstr.c ft_strlen.c ft_strjoin.c parsing.c \
 					
 CC				= cc
 RM				= rm -f
-# CFLAGS			= -Wall -Wextra  -fsanitize=address -g3
+ CFLAGS			= -Wall -Wextra   -g3 #-fsanitize=address
 CFLAGS			= -Wall -Wextra -Werror
 
 OBJS			= $(SRCS:.c=.o)

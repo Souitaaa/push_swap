@@ -6,7 +6,7 @@
 /*   By: csouita <csouita@student.42.fr>            +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2024/07/08 00:08:05 by csouita           #+#    #+#             */
-/*   Updated: 2024/07/08 23:14:20 by csouita          ###   ########.fr       */
+/*   Updated: 2024/07/09 18:09:20 by csouita          ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -54,6 +54,9 @@ void			pa(t_list **stack_b, t_list **stack_a);
 void			pb(t_list **stack_a, t_list **stack_b);
 void			rrb(t_list **stack_b);
 void			rra(t_list **stack_a);
+void 			rr(t_list **stack_a,t_list **stack_b);
+void 			ss(t_list **stack_a,t_list **stack_b);
+void 			rrr(t_list **stack_a ,t_list **stack_b);
 void			swap(t_list **stack);
 void			rotate(t_list **stack);
 void			reverse_rotate(t_list **stack);
@@ -74,6 +77,7 @@ void			sort(t_list **stack_a, t_list **stack_b, int p);
 int				ft_strcmp(char *s1, char *s2);
 char			*get_next_line(int fd);
 char			*ft_strchr(const char *s, int c);
+void 			what_move(t_list *stack_a, t_list *stack_b);
 
 
 #endif
