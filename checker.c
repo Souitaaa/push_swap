@@ -3,10 +3,10 @@
 /*                                                        :::      ::::::::   */
 /*   checker.c                                          :+:      :+:    :+:   */
 /*                                                    +:+ +:+         +:+     */
-/*   By: csouita <csouita@student.42.fr>            +#+  +:+       +#+        */
+/*   By: souita <souita@student.42.fr>              +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2024/07/08 00:06:48 by csouita           #+#    #+#             */
-/*   Updated: 2024/07/10 02:44:51 by csouita          ###   ########.fr       */
+/*   Updated: 2024/07/10 17:45:15 by souita           ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -21,6 +21,8 @@ void is_it_sorted(t_list *stack_a,t_list *stack_b)
         if(tmp->content > tmp->next->content)
         {
             ft_putstr_fd("KO\n",2);
+            free_stacks(&stack_a);
+            free_stacks(&stack_a);
             exit(1);
         }
         tmp = tmp->next;
@@ -28,15 +30,23 @@ void is_it_sorted(t_list *stack_a,t_list *stack_b)
     if(ft_lstsize(stack_a) == 0)
     {
         ft_putstr_fd("KO\n",2);
+        free_stacks(&stack_a);
+        free_stacks(&stack_a);
         exit(1);
     }
     else if(ft_lstsize(stack_b) > 0)
     {
         ft_putstr_fd("KO\n",2);
+        free_stacks(&stack_a);
+        free_stacks(&stack_a);
         exit(1);
     }
-    else    
+    else
+    {
         ft_putstr_fd("OK\n",1);
+        free_stacks(&stack_a);
+        free_stacks(&stack_a);
+    }
 }
 
 void the_move(char *line, t_list **stack_a, t_list **stack_b)
