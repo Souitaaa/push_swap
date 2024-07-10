@@ -3,10 +3,10 @@
 /*                                                        :::      ::::::::   */
 /*   checker.c                                          :+:      :+:    :+:   */
 /*                                                    +:+ +:+         +:+     */
-/*   By: souita <souita@student.42.fr>              +#+  +:+       +#+        */
+/*   By: csouita <csouita@student.42.fr>            +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2024/07/08 00:06:48 by csouita           #+#    #+#             */
-/*   Updated: 2024/07/10 17:45:15 by souita           ###   ########.fr       */
+/*   Updated: 2024/07/10 23:24:01 by csouita          ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -74,13 +74,7 @@ void the_move(char *line, t_list **stack_a, t_list **stack_b)
     else if (ft_strcmp(line,"rrr\n") == 0)
         rrr(stack_a,stack_b);
     else
-        {
-            // free_stacks(stack_a);
-            // free_stacks(stack_b);
-            // free(line);
-            ft_putstr_fd("Error\n",1);
-            exit(1);
-        }
+            (free_stacks(stack_a),free_stacks(stack_b),free(line),ft_putstr_fd("Error\n",1),exit(1));
 }
 
 void what_move(t_list **stack_a, t_list **stack_b)
