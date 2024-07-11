@@ -10,7 +10,6 @@
 /*                                                                            */
 /* ************************************************************************** */
 
-
 #include "push_swap_bonus.h"
 
 void	swap(t_list **stack)
@@ -49,7 +48,7 @@ void	reverse_rotate(t_list **stack)
 	ft_lstadd_front(stack, last);
 }
 
-void rr(t_list **stack_a,t_list **stack_b)
+void	rr(t_list **stack_a, t_list **stack_b)
 {
 	ra(stack_a);
 	rb(stack_b);

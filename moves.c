@@ -62,9 +62,9 @@ int	max_number(t_list *stack)
 	return (max);
 }
 
-void rr(t_list **stack_a,t_list **stack_b)
+void	rr(t_list **stack_a, t_list **stack_b)
 {
 	ra(stack_a);
 	rb(stack_b);
-	ft_putstr_fd("rr\n",1);
+	ft_putstr_fd("rr\n", 1);
 }

@@ -1,39 +1,33 @@
 /* ************************************************************************** */
 /*                                                                            */
 /*                                                        :::      ::::::::   */
-/*   ft_strjoin.c                                       :+:      :+:    :+:   */
+/*   ft_strchr.c                                        :+:      :+:    :+:   */
 /*                                                    +:+ +:+         +:+     */
 /*   By: csouita <csouita@student.42.fr>            +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
-/*   Created: 2024/05/25 17:16:08 by csouita           #+#    #+#             */
-/*   Updated: 2024/07/11 00:40:21 by csouita          ###   ########.fr       */
+/*   Created: 2024/07/11 00:38:36 by csouita           #+#    #+#             */
+/*   Updated: 2024/07/11 00:39:18 by csouita          ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
-#include "push_swap.h"
+#include "push_swap_bonus.h"
 
-char	*ft_strjoin(char *s1, char *s2)
+char	*ft_strchr(const char *s, int c)
 {
-	int		len;
-	char	*p;
-	int		i;
-	int		j;
+	int	i;
 
-	len = ft_strlen(s1) + ft_strlen(s2);
 	i = 0;
-	j = 0;
-	p = malloc((len + 2) * sizeof(char));
-	if (p == NULL)
-		return (NULL);
-	while (s1 != NULL && s1[i] != '\0')
+	if (!s)
 	{
-		p[i] = s1[i];
+		return (NULL);
+	}
+	while (s[i])
+	{
+		if ((char)c == s[i])
+			return ((char *)(&s[i]));
 		i++;
 	}
-	while (s2 != NULL && s2[j] != '\0')
-		p[i++] = s2[j++];
-	p[i++] = ' ';
-	p[i] = '\0';
-	free(s1);
-	return (p);
+	if ((char)c == s[i])
+		return ((char *)(&s[i]));
+	return (NULL);
 }

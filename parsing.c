@@ -6,7 +6,7 @@
 /*   By: csouita <csouita@student.42.fr>            +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2024/05/22 18:04:13 by csouita           #+#    #+#             */
-/*   Updated: 2024/07/09 18:53:07 by csouita          ###   ########.fr       */
+/*   Updated: 2024/07/11 00:25:35 by csouita          ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -14,10 +14,7 @@
 
 long	ft_atoi(char *str)
 {
-	long	res;
-	int		i;
-	int		sig;
-
+	long (i), (sig), (res);
 	res = 0;
 	i = 0;
 	sig = 1;
