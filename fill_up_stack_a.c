@@ -6,7 +6,7 @@
 /*   By: csouita <csouita@student.42.fr>            +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2024/05/27 15:53:33 by csouita           #+#    #+#             */
-/*   Updated: 2024/07/11 00:13:15 by csouita          ###   ########.fr       */
+/*   Updated: 2024/07/13 17:45:07 by csouita          ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -45,7 +45,7 @@ void	fill_up_stack_a(int ac, char **av, t_list **stack_a)
 	strs = NULL;
 	while (ac > i)
 	{
-		check_spaces(av[i], stack_a, strs);
+		check_spaces(av[i], stack_a, str);
 		str = ft_strjoin(str, av[i++]);
 	}
 	strs = ft_split(str, ' ');

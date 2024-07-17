@@ -6,7 +6,7 @@
 /*   By: csouita <csouita@student.42.fr>            +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2024/05/22 18:04:13 by csouita           #+#    #+#             */
-/*   Updated: 2024/07/11 00:25:35 by csouita          ###   ########.fr       */
+/*   Updated: 2024/07/13 22:14:53 by csouita          ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -40,7 +40,7 @@ long	ft_atoi(char *str)
 	return (sig * res);
 }
 
-int	check_spaces(char *av, t_list **stack_a, char **strs)
+int	check_spaces(char *av, t_list **stack_a,char *str)
 {
 	int	i;
 
@@ -49,9 +49,9 @@ int	check_spaces(char *av, t_list **stack_a, char **strs)
 		i++;
 	if (!av[i])
 	{
-		ft_putstr_fd("Error1\n", 2);
+		ft_putstr_fd("Error\n", 2);
 		free_stacks(stack_a);
-		free_strs(strs);
+		free(str);
 		exit(255);
 	}
 	return (0);

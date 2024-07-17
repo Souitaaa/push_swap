@@ -6,7 +6,7 @@
 /*   By: csouita <csouita@student.42.fr>            +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2024/06/24 16:24:07 by csouita           #+#    #+#             */
-/*   Updated: 2024/07/07 20:44:00 by csouita          ###   ########.fr       */
+/*   Updated: 2024/07/13 17:45:51 by csouita          ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -29,7 +29,7 @@ size_t			ft_strlen(char *s);
 char			*ft_strjoin(char *s1, char *s2);
 void			*ft_memcpy(void *dest, const void *src, size_t n);
 char			**ft_split(char *s, char c);
-int				check_spaces(char *av, t_list **stack_a, char **strs);
+int				check_spaces(char *av, t_list **stack_a, char *str);
 long			ft_atoi(char *str);
 t_list			*ft_lstnew(int content);
 void			fill_up_stack_a(int ac, char **av, t_list **stack_a);
