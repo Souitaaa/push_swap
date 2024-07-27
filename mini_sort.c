@@ -6,7 +6,7 @@
 /*   By: csouita <csouita@student.42.fr>            +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2024/06/23 16:24:03 by csouita           #+#    #+#             */
-/*   Updated: 2024/07/13 18:40:52 by csouita          ###   ########.fr       */
+/*   Updated: 2024/07/27 15:36:18 by csouita          ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -44,7 +44,7 @@ void	sort_four(t_list **stack_a, t_list **stack_b)
 	free_stacks(stack_b);
 }
 
-void		sort_by_push_ab(t_list **stack_a, t_list **stack_b, int p)
+void	sort_by_push_ab(t_list **stack_a, t_list **stack_b, int p)
 {
 	while ((*stack_a))
 	{

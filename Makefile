@@ -36,4 +36,3 @@ fclean:clean
 	$(RM) $(NAME) $(NAME_1)
 
 re:fclean all bonus
-# .SECONDARY : $(OBJS)
